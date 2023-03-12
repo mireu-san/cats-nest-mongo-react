@@ -10,9 +10,9 @@ import { Cat } from './cats.interface';
 //   breed: string;
 // }
 
-@Controller('cats')
+@Controller('/cats')
 export class CatsController {
-  constructor(@InjectModel('Cat') private catModel: Model<Cat>) {}
+  constructor(@InjectModel('Cat') private catModel: Model<Cat>) { }
 
   @Get()
   async findAll(): Promise<Cat[]> {
